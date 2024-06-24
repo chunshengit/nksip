@@ -30,7 +30,7 @@
        {ref,"4d74ab31b20ba7a1449f1f72c1c51829f18d2d5c"}},
   0},
  {<<"nkserver">>,
-  {git,"https://github.com/netcomposer/nkserver",
+  {git,"https://github.com/chunshengit/nkserver",
        {ref,"ec17566f00aaf56f6bd60dc391d8da41cf625625"}},
   0},
  {<<"parsexml">>,{pkg,<<"parsexml">>,<<"1.0.0">>},1},
