@@ -119,11 +119,13 @@ headers([], Req, _Policy) ->
     Req;
 
 headers([{<<"body">>, Value}|Rest], Req, Policy) ->
-    Body1 = list_to_binary(http_uri:decode(nklib_util:to_list(Value))), 
+%%    Body1 = list_to_binary(http_uri:decode(nklib_util:to_list(Value))), 
+    Body1 = list_to_binary( uri_string:unquote(nklib_util:to_list(Value))), 
     headers(Rest, Req#sipmsg{body=Body1}, Policy);
 
 headers([{Name, Value}|Rest], Req, Policy) ->
-    Value1 = http_uri:decode(nklib_util:to_list(Value)), 
+  %%  Value1 = http_uri:decode(nklib_util:to_list(Value)), 
+    Value1 = uri_string:unquote(nklib_util:to_list(Value)), 
     Req1 = parse(Name, Value1, Req, Policy),
     headers(Rest, Req1, Policy);
 
