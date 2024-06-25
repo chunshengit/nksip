@@ -36,7 +36,7 @@
 -include_lib("nklib/include/nklib.hrl").
 -include("nksip.hrl").
 -include("nksip_call.hrl").
--include_lib("nkserver/include/nkserver_callback.hrl")
+-include_lib("nkserver/include/nkserver_callback.hrl").
 
 
 
